@@ -38,7 +38,7 @@ load_to_mem("args-uncompressed.txt", 0x00000100)
 f = open("first32k.bin", "wb")
 
 for m in mem:
-   f.write(chr(m))
+   f.write(bytes(chr(m), 'UTF-8'))
 
 f.close()
 
